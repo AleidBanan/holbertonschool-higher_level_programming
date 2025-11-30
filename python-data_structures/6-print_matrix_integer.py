@@ -1,6 +1,9 @@
 #!/usr/bin/python3
-print_matrix_integer = __import__('5-print_matrix_integer').print_matrix_integer
-
-if __name__ == "__main__":
-    matrix = [[0]]
-    print_matrix_integer(matrix)
+def print_matrix_integer(matrix=[[]]):
+    for row in matrix:
+        for i, val in enumerate(row):
+            if i != len(row) - 1:
+                print("{}".format(val), end=" ")
+            else:
+                print("{}".format(val), end="")
+        print()
