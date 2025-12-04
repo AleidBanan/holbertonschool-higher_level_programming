@@ -1,0 +1,30 @@
+>>> add_integer(1, 2)
+3
+>>> add_integer(100, -2)
+98
+>>> add_integer(2, "School")
+Traceback (most recent call last):
+    ...
+TypeError: b must be an integer
+>>> add_integer(None, 5)
+Traceback (most recent call last):
+    ...
+TypeError: a must be an integer
+>>> add_integer(3.9, 2.1)
+5
+>>> add_integer(-3.4, 1.6)
+-1
+>>> add_integer(3.9)
+101
+>>> add_integer("Hello", 3)
+Traceback (most recent call last):
+    ...
+TypeError: a must be an integer
+>>> add_integer(3, float('inf'))
+Traceback (most recent call last):
+    ...
+TypeError: b must be an integer
+>>> add_integer(float('nan'), 3)
+Traceback (most recent call last):
+    ...
+TypeError: a must be an integer
