@@ -5,6 +5,7 @@ Contain one method that the size must be integer and greater than zero
 Print square with the character #
 """
 
+
 def print_square(size):
     """Print square with character #"""
     if type(size) is not int:
