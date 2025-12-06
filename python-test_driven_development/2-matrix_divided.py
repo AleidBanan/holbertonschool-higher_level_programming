@@ -11,7 +11,10 @@ Provides a function that divides all elements of a matrix by `div`.
 
 
 def matrix_divided(matrix, div):
-    """Return a new matrix with each element divided by `div`, rounded to 2 dp."""
+    """
+    Return a new matrix with each element divided by `div`,
+    rounded to 2 decimal places.
+    """
     type_msg = "matrix must be a matrix (list of lists) of integers/floats"
     size_msg = "Each row of the matrix must have the same size"
 
