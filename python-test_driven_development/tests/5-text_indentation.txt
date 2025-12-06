@@ -1,5 +1,6 @@
 How are you?
 <BLANKLINE>
+>>> text_indentation = __import__('5-text_indentation').text_indentation
 >>> text_indentation("Hello, how are you?\n")
 Hello, how are you?
 <BLANKLINE>
