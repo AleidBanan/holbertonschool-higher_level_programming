@@ -4,6 +4,7 @@ How are you?
 >>> text_indentation("Hello, how are you?\n")
 Hello, how are you?
 <BLANKLINE>
+<BLANKLINE>
 
 Falied case:
 
