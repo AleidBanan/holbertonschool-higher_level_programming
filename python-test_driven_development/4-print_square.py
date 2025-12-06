@@ -15,5 +15,10 @@ def print_square(size):
     if type(size) is float and size < 0:
         raise TypeError("size must be an integer")
 
+    # For size 0, print nothing at all (no newline)
+    if size == 0:
+        return
+
+    # For size >= 1, print the square and end with a newline (as required)
     message = "\n".join(["#" * size for _ in range(size)])
     print(message)
