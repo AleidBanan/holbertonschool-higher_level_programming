@@ -1,4 +1,7 @@
 >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+Traceback (matrix not a proper list of lists):
+>>> matrix_divided(1, 2)
 Traceback (most recent call last):
 ...
 TypeError: matrix must be a matrix (list of lists) of integers/floats
