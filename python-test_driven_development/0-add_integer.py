@@ -24,7 +24,7 @@ def add_integer(a, b=98):
     if not isinstance(b, (int, float)) or isinstance(b, bool):
         raise TypeError("b must be an integer")
 
-    # Handle NaN and Infinity before casting to int
+    # Handle NaN / Infinity before casting
     if isinstance(a, float):
         if a != a:
             raise ValueError("cannot convert float NaN to integer")
