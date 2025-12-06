@@ -6,6 +6,7 @@ The text with 2 new lines after each of these characters: ., ? and :
 Takes one text argument
 """
 
+
 def text_indentation(text):
     """a text with 2 new lines after each of these characters: ., ? and :"""
     if type(text) is not str:
