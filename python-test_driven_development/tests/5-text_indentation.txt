@@ -1,0 +1,35 @@
+How are you?
+<BLANKLINE>
+>>> text_indentation("Hello, how are you?\n")
+Hello, how are you?
+<BLANKLINE>
+
+Falied case:
+
+Test for wrong data type:
+>>> text_indentation(1)
+Traceback (most recent call last):
+...
+TypeError: text must be a string
+>>> text_indentation(True)
+Traceback (most recent call last):
+...
+TypeError: text must be a string
+
+Test for extra argument:
+>>> text_indentation("Hello", "how are you?")
+Traceback (most recent call last):
+...
+TypeError: text_indentation() takes 1 positional argument but 2 were given
+
+Test for too few argument:
+>>> text_indentation()
+Traceback (most recent call last):
+...
+TypeError: text_indentation() missing 1 required positional argument: 'text'
+
+Test for None argument:
+>>> text_indentation(None)
+Traceback (most recent call last):
+...
+TypeError: text must be a string
