@@ -1,10 +1,14 @@
 #!/usr/bin/python3
+"""Module that defines a Square class with size validation."""
 
-# 2-square.py
-"one-line module docstring"
 
 class Square:
-    "one-line class docstring"
+    """Square class with size validation to ensure it's a proper square."""
+
     def __init__(self, size=0):
-        # validation checks
-        # assign private attribute
+        """Initialize a new Square instance with optional validated size."""
+        if not isinstance(size, int):
+            raise TypeError("size must be an integer")
+        if size < 0:
+            raise ValueError("size must be >= 0")
+        self.__size = size
