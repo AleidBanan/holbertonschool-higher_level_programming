@@ -1,7 +1,8 @@
 #!/usr/bin/python3
-"""This module defines an empty `Square` class intended as a starting point """
+# 0-square.py
+"""Define a c6lass Square."""
 
 
 class Square:
-    """Represents a square. This empty implementation is deliberately minimal"""
+    """Represent a square."""
     pass
