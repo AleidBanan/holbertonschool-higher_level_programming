@@ -8,7 +8,7 @@ Import the class:
 Create an instance:
 >>> bg = BaseGeometry()
 
-Test area() method:
+Test area():
 >>> bg.area()
 Traceback (most recent call last):
 Exception: area() is not implemented
