@@ -1,22 +1,59 @@
-BaseGeometry = __import__('7-base_geometry').BaseGeometry
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
-bg = BaseGeometry()
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("correct_int", 12)
 
-bg.area()
-bg.integer_validator("my_int", 12)
-bg.integer_validator("width", 89)
+>>> bg.integer_validator("invalid_int", -3)
+Traceback (most recent call last):
+...
+ValueError: invalid_int must be greater than 0
 
-try:
-    bg.integer_validator("name", "John")
-except Exception as e:
-    print("[{}] {}".format(e.__class__.__name__, e))
+>>> bg.integer_validator("not_an_int", "salut")
+Traceback (most recent call last):
+...
+TypeError: not_an_int must be an integer
 
-try:
-    bg.integer_validator("age", 0)
-except Exception as e:
-    print("[{}] {}".format(e.__class__.__name__, e))
+>>> bg.integer_validator("not_an_int", [3, 4])
+Traceback (most recent call last):
+...
+TypeError: not_an_int must be an integer
 
-try:
-    bg.integer_validator("distance", -4)
-except Exception as e:
-    print("[{}] {}".format(e.__class__.__name__, e))
+>>> bg.integer_validator("not_an_int", (4,))
+Traceback (most recent call last):
+...
+TypeError: not_an_int must be an integer
+
+>>> bg.integer_validator("not_an_int", {3, 4})
+Traceback (most recent call last):
+...
+TypeError: not_an_int must be an integer
+
+>>> bg.integer_validator("not_an_int", None)
+Traceback (most recent call last):
+...
+TypeError: not_an_int must be an integer
+
+>>> bg.integer_validator("not_positive", 0)
+Traceback (most recent call last):
+...
+ValueError: not_positive must be greater than 0
+
+>>> bg.area()
+Traceback (most recent call last):
+...
+Exception: area() is not implemented
+
+>>> bg.integer_validator()
+Traceback (most recent call last):
+...
+TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+>>> bg.integer_validator("name")
+Traceback (most recent call last):
+...
+TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+>>> bg.integer_validator("not_an_int", True)
+Traceback (most recent call last):
+...
+TypeError: not_an_int must be an integer
