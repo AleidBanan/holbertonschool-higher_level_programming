@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-"""Lists states matching the given name"""
+"""Lists states matching the given name (case-sensitive)"""
 
-import MySQLdb
 import sys
+import MySQLdb
 
 
 if __name__ == "__main__":
@@ -14,18 +14,17 @@ if __name__ == "__main__":
         db=sys.argv[3]
     )
 
-    c = db.cursor()
+    cur = db.cursor()
     query = (
         "SELECT * FROM states "
-        "WHERE name = '{}' "
+        "WHERE name LIKE BINARY '{}' "
         "ORDER BY id ASC;"
     ).format(sys.argv[4])
 
-    c.execute(query)
+    cur.execute(query)
 
-    rows = c.fetchall()
-    for row in rows:
+    for row in cur.fetchall():
         print(row)
 
-    c.close()
+    cur.close()
     db.close()
